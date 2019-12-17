@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "elsa"
+version = "0.1.5"
+description = "Helper module for hosting Frozen-Flask based websites on GitHub pages"
+authors = ["Miro Hrončok <miro@hroncok.cz>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+click = "*"
+Flask = "*"
+Frozen-Flask = "^0.15"
+ghp-import = "*"
