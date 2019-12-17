@@ -45,7 +45,7 @@ def deploy(html_dir, *, remote, push, show_err):
         github_token = os.environ.get('GITHUB_TOKEN')  # from .travis.yml
         repo_slug = os.environ.get('TRAVIS_REPO_SLUG')
         rurl = 'https://{}@github.com/{}.git'.format(github_token, repo_slug)
-        run(['git', 'remote', 'set-url', remote, rurl])
+        run(['git', 'remote', 'set-url', '--add', remote, rurl])
 
     print('Rewriting gh-pages branch...')
     run(['git', 'branch', '-D', 'gh-pages'], check=False, quiet=True)
